@@ -97,13 +97,13 @@ function sumArray(testArray){ //eslint-disable-line
 
   var arrayCount = 0;
   for (var i = 0; i < testArray.length; i++){
-    arrayCount = arrayCount + testArray[i];
-    console.log(arrayCount);
+    arrayCount = sum(arrayCount, testArray[i])[0];
   }
-  console.log(testArray);
+  // console.log(arrayCount + 'this is array count');
+  // console.log(testArray);
   var messageSumArray = testArray + ' was passed in as an array of numbers, and ' + arrayCount + ' is their sum.';
+  console.log(messageSumArray + 'this is sum array');
   return [arrayCount, messageSumArray];
-
 }
 
 // Here is the test for sumArray(); uncomment it to run it

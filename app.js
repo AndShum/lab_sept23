@@ -53,13 +53,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
+// var multiply
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  var sumOfThree = a + b + c;
-  var productOfThree = a * b * c;
-  var messageForSumOfThree = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfThree + '.';
-  var messageForProductOfThree = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOfThree + '.';
-  var outputForSumAndMultiply = [sumOfThree, productOfThree, messageForSumOfThree, messageForProductOfThree];
-  return outputForSumAndMultiply;
+  var thirdNumForSum = sum(a,b)[0];
+  console.log(thirdNumForSum);
+  var sumOfThree = sum(thirdNumForSum,c)[0];
+  console.log(thirdNumForSum + ' this is thirdNumForSum');
+  var messageForSumPlus = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfThree + '.';
+  var thirdNumForProduct = multiply(a,b)[0];
+  console.log(thirdNumForProduct);
+  var productOfThree = multiply(thirdNumForProduct,c)[0];
+  console.log(productOfThree + ' product of three');
+  var messageForProduct = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOfThree + '.';
+  console.log(messageForProduct + ' message for product');
+  var output = [sumOfThree, productOfThree, messageForSumPlus, messageForProduct];
+  console.log(output);
+  return output;
+
 }
 
 
@@ -79,14 +90,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
-var sumOfTestArray = 2 + 3 + 4;
-var messageForTestArray = 2 + ',' + 3 + ',' + 4 + ' was passed in as an array of numbers, and ' + sumOfTestArray + ' is their sum.';
-var outputForTestArray = [sumOfTestArray, messageForTestArray];
 
+var testArray = [2,3,4];//eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  return outputForTestArray;
+
+  var arrayCount = 0;
+  for (var i = 0; i < testArray.length; i++){
+    arrayCount = arrayCount + testArray[i];
+    console.log(arrayCount);
+  }
+  console.log(testArray);
+  var messageSumArray = testArray + ' was passed in as an array of numbers, and ' + arrayCount + ' is their sum.';
+  return [arrayCount, messageSumArray];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -106,8 +123,9 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+// var multipleArray = [2,3,4];
 
+function multiplyArray(testArray){ //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it

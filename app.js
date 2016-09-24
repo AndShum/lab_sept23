@@ -95,6 +95,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 function sumArray(testArray){ //eslint-disable-line
 
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
